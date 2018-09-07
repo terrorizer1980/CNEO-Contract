@@ -6,6 +6,12 @@ CNEO 可由 NEO 一比一地对换，并且支持退回操作。该合约的目�
 
 本项目为 CNEO preview 未在主网进行过部署。
 
+## 相关项目：
+
+[CGAS preview](https://github.com/chenzhitong/CGAS-Contract)
+
+[CGAS](https://github.com/neo-ngd/CGAS-Contract)
+
 ## 技术介绍：
 
 NEP-5 规范中的方法：
