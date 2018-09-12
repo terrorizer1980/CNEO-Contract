@@ -8,8 +8,6 @@ CNEO 可由 NEO 一比一地对换，并且支持退回操作。该合约的目�
 
 ## 相关项目：
 
-[CGAS preview](https://github.com/chenzhitong/CGAS-Contract)
-
 [CGAS](https://github.com/neo-ngd/CGAS-Contract)
 
 ## 技术介绍：

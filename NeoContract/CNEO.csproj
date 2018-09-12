@@ -8,8 +8,8 @@
     <ProjectGuid>{15DFB6B6-A57D-4A26-A5B7-EA1B2D102E20}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>CGAS</RootNamespace>
-    <AssemblyName>CGAS</AssemblyName>
+    <RootNamespace>CNEO</RootNamespace>
+    <AssemblyName>CNEO</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
