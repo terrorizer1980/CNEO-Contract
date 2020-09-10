@@ -268,7 +268,7 @@ namespace CNEO
         [DisplayName("supportedStandards")]
         public static string[] SupportedStandards()
         {
-            string[] result = { "NEP-5", "NEP-10", "NEP-1234" };
+            string[] result = { "NEP-5", "NEP-7", "NEP-10" };
             return result;
         }
 
