@@ -64,14 +64,18 @@ namespace CNEO
                 }
                 //Check that there is no money left this contract
                 BigInteger outputAmount = 0;
+                bool ifClaimGas = true;
                 foreach (var output in outputs)
                 {
-                    if (output.AssetId != AssetId)
+                    if (output.ScriptHash.AsBigInteger() == currentHash.AsBigInteger() && output.ScriptHash.AsBigInteger() == AssetId.AsBigInteger())
                     {
-                        return Runtime.CheckWitness(GasClaim);
-                    }
-                    if (output.ScriptHash.AsBigInteger() == currentHash.AsBigInteger())
+                        ifClaimGas = false;
                         outputAmount += output.Value;
+                    }                        
+                }
+                if (ifClaimGas) 
+                {
+                    return Runtime.CheckWitness(GasClaim);
                 }
                 return outputAmount == inputAmount;
             }
