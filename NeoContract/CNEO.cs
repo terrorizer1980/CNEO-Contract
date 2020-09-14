@@ -10,6 +10,8 @@ namespace CNEO
 {
     public class CNEO : SmartContract
     {
+        private static readonly byte[] GasClaim = "AQzRMe3zyGS8W177xLJfewRRQZY2kddMun".ToScriptHash();
+
         [DisplayName("transfer")]
         public static event deleTransfer Transferred;
         public delegate void deleTransfer(byte[] from, byte[] to, BigInteger value);
@@ -64,6 +66,10 @@ namespace CNEO
                 BigInteger outputAmount = 0;
                 foreach (var output in outputs)
                 {
+                    if (output.AssetId != AssetId)
+                    {
+                        return Runtime.CheckWitness(GasClaim);
+                    }
                     if (output.ScriptHash.AsBigInteger() == currentHash.AsBigInteger())
                         outputAmount += output.Value;
                 }
