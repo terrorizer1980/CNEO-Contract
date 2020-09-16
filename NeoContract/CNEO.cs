@@ -67,7 +67,7 @@ namespace CNEO
                 bool ifClaimGas = true;
                 foreach (var output in outputs)
                 {
-                    if (output.ScriptHash.AsBigInteger() == currentHash.AsBigInteger() && output.ScriptHash.AsBigInteger() == AssetId.AsBigInteger())
+                    if (output.ScriptHash.AsBigInteger() == currentHash.AsBigInteger() && output.AssetId.AsBigInteger() == AssetId.AsBigInteger())
                     {
                         ifClaimGas = false;
                         outputAmount += output.Value;
